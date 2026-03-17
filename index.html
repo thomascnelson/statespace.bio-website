@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statespace.bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #001F3F; /* Deep Space Blue */
+            --teal: #00A69C;      /* Teal Transition */
+            --light-blue: #86C5DA; /* Light Attractor Blue */
+            --bright-accent: #00EDFF;
+            --white: #ffffff;
+            --bg-light: #f4f7f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--deep-blue); line-height: 1.6; background-color: var(--bg-light); }
+        
+        /* Layout Containers */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* Navigation */
+        nav { background: var(--white); padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--deep-blue); display: flex; align-items: center; text-decoration: none; }
+        .logo span { color: var(--teal); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--deep-blue) 0%, #003366 100%); color: var(--white); text-align: center; padding: 120px 0; }
+        .hero h1 { font-size: 3.0rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -1px; }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; font-weight: 300; }
+        .btn { background: var(--teal); color: var(--white); padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 700; transition: background 0.3s; display: inline-block; }
+        .btn:hover { background: var(--bright-accent); color: var(--deep-blue); }
+
+        /* Core Idea Section */
+        .core-idea { text-align: center; background: var(--white); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .card { padding: 30px; border-radius: 10px; border: 1px solid #eee; transition: transform 0.3s; text-align: left; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--teal); margin-bottom: 15px; }
+
+        /* Trajectory Section */
+        .trajectory { background: var(--bg-light); }
+        .section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+        .accent-text { color: var(--teal); font-weight: 700; }
+
+        /* Footer */
+        footer { background: var(--deep-blue); color: var(--white); padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        .footer-logo { margin-bottom: 20px; font-weight: 700; opacity: 0.8; }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+        .responsive {
+             max-width: 100%;
+             height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">statespace<span>.bio</span></a>
+            <div>
+                <a href="#about" style="text-decoration:none; color:var(--deep-blue); font-weight:700; font-size:1.1rem;">RESEARCH PLAN</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <img src="logo.png" width="805" height="439" alt="statespace.bio logo" class="responsive">
+            <h1>Biological Navigation</h1>
+            <p>We build computational frameworks that learn the geometry and dynamics of biological state space to identify the minimal interventions required for moving the system from one state to another.</p>
+            <a href="#about" class="btn">Explore the Idea</a>
+        </div>
+    </header>
+
+    <section id="about" class="core-idea">
+        <div class="container">
+            <h2 class="section-title">The <span class="accent-text">Geometric</span> Approach</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Stable biological states correspond to attractors in a high-dimensional space. We rank candidate control variables by their geometric leverage on transitions between these attractors.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Geometry-First</h3>
+                    <p>Infers control variables from the geometry and dynamics of state space alone, without requiring pre-existing regulatory networks.</p>
+                </div>
+                <div class="card">
+                    <h3>Formal Minimality</h3>
+                    <p>Defines "minimal intervention" as the perturbation that maximally redirects trajectory direction per unit of feature change.</p>
+                </div>
+                <div class="card">
+                    <h3>Calibrated Claims</h3>
+                    <p>Explicitly distinguishes between geometric candidates and causal drivers, acting as a high-precision hypothesis generation engine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trajectory">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Long-Term Vision: Extending Lifespan and Healthspan</h2>
+            <p style="max-width: 730px; margin: 0 auto 30px;">If biological states are navigable, then cellular and organismal states are theoretically redirectable toward desirable states. Our core mission is to determine if this is possible and if so, solve for the minimal set of variables needed to move a cell or organism from state A to state B.</p>
+            <p style="max-width: 730px; margin: 0 auto 30px;"><strong>Proof of Concept</strong><br> 
+            We are currently using high quality rich single-cell transcriptomic data sets from Pancreatic Endocrinogenesis & Dentate Gyrus Neurogenesis to establish proof of concept. Come back soon to see updates on our progress.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">&copy; 2026 statespace.bio</div>
+            <p style="max-width: 730px; margin: 0 auto 30px;">Built on principles of rigor, simplicity, and honest bench-marking. We will release all of our results and methods to the public as open source so anyone can benefit from our work.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
