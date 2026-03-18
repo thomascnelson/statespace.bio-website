@@ -27,6 +27,9 @@
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.5rem; color: var(--deep-blue); display: flex; align-items: center; text-decoration: none; }
         .logo span { color: var(--teal); }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--deep-blue); font-weight: 700; font-size: 1.1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--teal); }
 
         /* Hero Section */
         .hero { background: linear-gradient(135deg, var(--deep-blue) 0%, #003366 100%); color: var(--white); text-align: center; padding: 120px 0; }
@@ -67,8 +70,9 @@
     <nav>
         <div class="container nav-content">
             <a href="#" class="logo">statespace<span>.bio</span></a>
-            <div>
-                <a href="#about" style="text-decoration:none; color:var(--deep-blue); font-weight:700; font-size:1.1rem;">RESEARCH PLAN</a>
+            <div class="nav-links">
+                <a href="#about">RESEARCH PLAN</a>
+                <a href="about.html">ABOUT</a>
             </div>
         </div>
     </nav>
@@ -110,7 +114,7 @@
             <p style="max-width: 730px; margin: 0 auto 30px;">If biological states are navigable, then cellular and organismal states are theoretically redirectable toward desirable states. Our core mission is to determine if this is possible and if so, solve for the minimal set of variables needed to move a cell or organism from state A to state B.</p>
             <p style="max-width: 730px; margin: 0 auto 30px;"><strong>Proof of Concept</strong>
             <p style="max-width: 730px; margin: 0 auto 30px;">The first study underway is the State Navigator project. We are currently using high quality single-cell transcriptomic data sets from Pancreatic Endocrinogenesis & Dentate Gyrus Neurogenesis to establish proof of concept. This project works in continuous gene expression space where cells move along trajectories between attractor states, and we are asking: what are the minimal perturbations that redirect those trajectories? <br>
-            <p style="max-width: 730px; margin: 0 auto 30px;">The second study underway is the Anti-Microbial Resistance Navigator project. This project works in a discrete/mixed genomic feature space where bacterial lineages occupy positions defined by their gene content, SNPs, and mobile elements. Resistant and susceptible phenotypes are stable phenotypic attractors in this genomic landscape. We'll use genetic programming to learn the geometric boundaries between resistance basins. The interpretable rules it produces will be compact descriptions of the minimal genomic features that define those boundaries.<br>
+            <p style="max-width: 730px; margin: 0 auto 30px;">The second study underway is the anti-microbial resistance project (AMR). The AMR project works in a discrete/mixed genomic feature space where bacterial lineages occupy positions defined by their gene content, SNPs, and mobile elements. Resistant and susceptible phenotypes are stable phenotypic attractors in this genomic landscape. We'll use genetic programming to learn the geometric boundaries between resistance basins. The interpretable rules it produces will be compact descriptions of the minimal genomic features that define those boundaries.<br>
         </div>
     </section>
 

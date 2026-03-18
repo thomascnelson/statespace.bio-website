@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — statespace.bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #001F3F;
+            --teal: #00A69C;
+            --light-blue: #86C5DA;
+            --bright-accent: #00EDFF;
+            --white: #ffffff;
+            --bg-light: #f4f7f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--deep-blue); line-height: 1.6; background-color: var(--bg-light); }
+
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* Navigation */
+        nav { background: var(--white); padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--deep-blue); display: flex; align-items: center; text-decoration: none; }
+        .logo span { color: var(--teal); }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--deep-blue); font-weight: 700; font-size: 1.1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-links a.active { color: var(--teal); }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--deep-blue) 0%, #003366 100%); color: var(--white); text-align: center; padding: 120px 0; }
+        .hero-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+        .hero h1 { font-size: 3.0rem; margin-bottom: 16px; font-weight: 700; letter-spacing: -1px; }
+        .hero p { font-size: 1.25rem; opacity: 0.85; font-weight: 300; }
+
+        /* Bio Section */
+        .bio-section { background: var(--white); }
+        .bio-layout { display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: start; }
+        .bio-photo { width: 100%; border-radius: 12px; display: block; box-shadow: 0 12px 40px rgba(0, 31, 63, 0.15); }
+        .bio-text h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 6px; }
+        .bio-text .title { color: var(--teal); font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; margin-bottom: 28px; }
+        .bio-text p { font-size: 1.05rem; font-weight: 300; color: #2a3a50; line-height: 1.8; }
+        .divider { width: 50px; height: 3px; background: var(--teal); border-radius: 2px; margin: 20px 0 28px; }
+
+        /* Stats Strip */
+        .stats-section { background: var(--bg-light); }
+        .stats-section .section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
+        .accent-text { color: var(--teal); font-weight: 700; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .card { background: var(--white); padding: 30px; border-radius: 10px; border: 1px solid #eee; transition: transform 0.3s, box-shadow 0.3s; text-align: left; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card-stat { font-size: 2.25rem; font-weight: 700; color: var(--teal); margin-bottom: 10px; }
+        .card h3 { color: var(--deep-blue); margin-bottom: 10px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card p { font-size: 0.95rem; font-weight: 300; color: #4a5a6a; }
+
+        /* Footer */
+        footer { background: var(--deep-blue); color: var(--white); padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        .footer-logo { margin-bottom: 20px; font-weight: 700; opacity: 0.8; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .bio-layout { grid-template-columns: 1fr; gap: 40px; }
+            .bio-photo { max-width: 320px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">statespace<span>.bio</span></a>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="index.html#about">RESEARCH PLAN</a>
+                <a href="about.html" class="active">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-label">Meet the Founder</div>
+            <h1>Thomas Nelson</h1>
+            <p>Founder &amp; Chief Agentic Biologist</p>
+        </div>
+    </header>
+
+    <section class="bio-section">
+        <div class="container">
+            <div class="bio-layout">
+                <div>
+                    <img src="pic.png" alt="Thomas Nelson" class="bio-photo">
+                </div>
+                <div class="bio-text">
+                    <h2>Thomas Nelson</h2>
+                    <div class="title">Founder &amp; Chief Agentic Biologist, statespace.bio</div>
+                    <div class="divider"></div>
+                    <p>Tom spent 30 years as a research scientist in the pharmaceutical and biotechnology industry. He is a biologist that is cross-trained in computing, data science (machine learning) and artificial intelligence. He worked at several major pharmaceutical companies, namely Bristol-Myers Squibb, Novartis Institutes for Biomedical Research, Pfizer and Eli Lilly. Tom also spent a few years in the startup Biotech realm at 3 different firms. Currently he is Founder and Chief Agentic Biologist at statespace.bio, an open source biology research organization. Tom loves to use innovative new technologies to solve interesting and important problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Background <span class="accent-text">At a Glance</span></h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-stat">30 Years</div>
+                    <h3>Industry Experience</h3>
+                    <p>Three decades as a research scientist spanning major pharmaceutical and biotech organizations.</p>
+                </div>
+                <div class="card">
+                    <div class="card-stat">Pharma &amp; Biotech</div>
+                    <h3>Deep Domain Roots</h3>
+                    <p>BMS, Novartis, Pfizer, Eli Lilly, and three startup ventures — from big pharma to early-stage innovation.</p>
+                </div>
+                <div class="card">
+                    <div class="card-stat">Open Source</div>
+                    <h3>Committed to Openness</h3>
+                    <p>All results and methods released publicly so the broader scientific community can build on this work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">&copy; 2026 statespace.bio</div>
+            <p style="max-width: 730px; margin: 0 auto 30px;">Built on principles of rigor, simplicity, and honest bench-marking. We will release all of our results and methods to the public as open source so anyone can benefit from our work.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
